@@ -1,0 +1,1 @@
+web: gunicorn rank_mark_co.wsgi --log-file -
