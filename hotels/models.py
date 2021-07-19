@@ -26,7 +26,7 @@ class Hotels(models.Model):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'Restaurants'    
+        verbose_name_plural = 'Hotels'    
 
 class Images(models.Model):
     restaurant = models.ForeignKey(Hotels, on_delete = models.CASCADE)
