@@ -6,3 +6,8 @@ class CategoryModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = CategoryModel
         fields = '__all__'
+
+class HotelsModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Hotels
+        fields = '__all__'

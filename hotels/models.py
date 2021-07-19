@@ -11,7 +11,7 @@ class CategoryModel(models.Model):
     def __str__(self):
         return self.name
 
-class Restaurants(models.Model):
+class Hotels(models.Model):
     name = models.CharField(max_length = 100, verbose_name = 'Hotels\'s name')
     main_image = models.ImageField(verbose_name = 'Main Image')
     about_short_text = models.CharField(verbose_name = 'Short text about', max_length = 100)
@@ -29,12 +29,12 @@ class Restaurants(models.Model):
         verbose_name_plural = 'Restaurants'    
 
 class Images(models.Model):
-    restaurant = models.ForeignKey(Restaurants, on_delete = models.CASCADE)
+    restaurant = models.ForeignKey(Hotels, on_delete = models.CASCADE)
     image = models.ImageField()    
 
  
 class Reviews(models.Model):
-    restaurant = models.ForeignKey(Restaurants, on_delete = models.CASCADE)
+    restaurant = models.ForeignKey(Hotels, on_delete = models.CASCADE)
     writer = models.ForeignKey('auth.User', on_delete = models.CASCADE)
     comment = models.TextField()
     created_at = models.DateTimeField(auto_now_add = True)
@@ -43,6 +43,6 @@ class Reviews(models.Model):
         return self.comment
 
 class RatingOfHotel(models.Model):
-    restaurant = models.ForeignKey(Restaurants, on_delete = models.CASCADE)
+    restaurant = models.ForeignKey(Hotels, on_delete = models.CASCADE)
     rate_number = models.IntegerField()    
 

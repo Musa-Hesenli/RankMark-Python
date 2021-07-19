@@ -1,4 +1,3 @@
-from re import A
 from django.shortcuts import render
 
 
@@ -14,4 +13,10 @@ class CategoryAPIView(APIView):
     def get(self, request):
         categories = CategoryModel.objects.all()
         serializer = CategoryModelSerializer(categories, many = True)
+        return Response(serializer.data)
+
+class HotelsAPIView(APIView):
+    def get(self, request):
+        hotels = Hotels.objects.all()
+        serializer = HotelsModelSerializer(hotels, many = True)
         return Response(serializer.data)

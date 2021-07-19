@@ -3,6 +3,6 @@ from . import models
 # Register your models here.
 admin.site.register(models.CategoryModel)
 
-@admin.register(models.Restaurants)
+@admin.register(models.Hotels)
 class RestaurantModelAdmin(admin.ModelAdmin):
     list_display = ('name',)

@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'rank_mark_co.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd7646ro85eqfnt',
+        'USER' : 'kghrhnuicvervp',
+        'PASSWORD' : 'ca706ba54552951fd4a745e56864a1aeed9ee721c4a1d7e46e9cb4c9e1c1c150',
+        'HOST' : 'ec2-52-23-40-80.compute-1.amazonaws.com',
+        'PORT' : '5432'
     }
 }
 
